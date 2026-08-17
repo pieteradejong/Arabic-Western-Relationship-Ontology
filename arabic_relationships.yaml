@@ -1,0 +1,887 @@
+# Arabic Relationship Concepts — Phase 2 dataset (see README.md "Next Step")
+#
+# Per the methodology: dimension SCORES are intentionally left null. This file
+# only establishes spelling, transliteration, root, morphology, meaning,
+# domain, classical/modern usage, and likely (qualitative) dimensions.
+# `evidence` stays empty until claims are checked against the sources listed
+# in `sources_to_consult` (Phase 4). `example_usage` is filled only where a
+# well-attested collocation or Qur'anic/classical citation is already known;
+# otherwise it is left null pending corpus work.
+
+concepts:
+
+  # ── STRANGER / OUTSIDER ─────────────────────────────────────────────
+  - id: ar_gharib
+    language: Arabic
+    script: غريب
+    transliteration: gharīb
+    root: غ-ر-ب
+    morphology: "faʿīl-pattern adjective/noun from gharaba, 'to be distant, to depart, to set (of the sun)'"
+    glosses: [stranger, outsider, foreigner, unfamiliar person]
+    domains: [stranger]
+    usage:
+      classical: "Denotes one outside the tribe/kin group; carries a sense of displacement, not merely unfamiliarity."
+      modern: "General word for stranger/foreigner; also used adjectivally for 'strange, odd.'"
+    likely_dimensions: [low familiarity, low intimacy]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Represents the low-familiarity boundary of the relationship space; a useful anchor point rather than a relationship type per se."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  # ── SOCIAL ASSOCIATION / COMPANIONSHIP ──────────────────────────────
+  - id: ar_jalis
+    language: Arabic
+    script: جليس
+    transliteration: jalīs
+    root: ج-ل-س
+    morphology: "faʿīl-pattern noun from jalasa, 'to sit'"
+    glosses: [one who sits with you, social companion, conversational companion]
+    domains: [social association, companionship]
+    usage:
+      classical: "Emphasizes the seated, conversational majlis (gathering/salon) context of companionship."
+      modern: "Less common in everyday speech; retains the sense of a companion in conversation or a gathering."
+    likely_dimensions: [companionship, low-to-moderate intimacy]
+    register: [Classical Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Defines companionship by shared presence/activity (sitting, conversing) rather than by emotional depth."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  - id: ar_sahib
+    language: Arabic
+    script: صاحب
+    transliteration: ṣāḥib
+    root: ص-ح-ب
+    morphology: "active participle (fāʿil) of ṣaḥiba, 'to accompany, keep company with'"
+    glosses: [companion, associate, one who accompanies another, owner/holder (in compounds)]
+    domains: [social association, companionship]
+    usage:
+      classical: "Broad term; 'the Companions' (al-Ṣaḥāba) denotes those who accompanied the Prophet — association/proximity, not necessarily intimacy."
+      modern: "Everyday word for friend/companion; also used generically as 'owner of' or 'holder of' in compounds (ṣāḥib al-bayt, 'homeowner')."
+    likely_dimensions: [companionship, variable intimacy]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Broader than English 'friend' — the root sense is accompaniment/association, which can range from casual to very close."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_rafiq
+    language: Arabic
+    script: رفيق
+    transliteration: rafīq
+    root: ر-ف-ق
+    morphology: "faʿīl-pattern noun from rafuqa, 'to be gentle with, accompany gently'"
+    glosses: [companion, fellow, traveling companion]
+    domains: [social association, companionship]
+    usage:
+      classical: "Often paired with travel/journey imagery (rafīq al-safar/al-darb, 'companion of the road')."
+      modern: "Also adopted politically as 'comrade' in 20th-century Arab socialist/nationalist movements."
+    likely_dimensions: [companionship, shared circumstance]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: "رفيق الدرب — rafīq al-darb, 'companion of the path/journey'"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Emphasizes accompanying someone through a journey or shared circumstance rather than emotional closeness per se."
+      - "Modern political sense ('comrade') is a distinct semantic layer worth tracking separately in the register field."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_zamil
+    language: Arabic
+    script: زميل
+    transliteration: zamīl
+    root: ز-م-ل
+    morphology: "faʿīl-pattern noun; classical sense tied to zamala, 'to carry/pair up (e.g. sharing a mount)'"
+    glosses: [colleague, classmate, co-worker]
+    domains: [social association]
+    usage:
+      classical: "Rare/marginal in classical texts relative to its modern currency."
+      modern: "Standard word for institutional peer: colleague, classmate, fellow professional."
+    likely_dimensions: [low-to-moderate companionship, institutional context, low intimacy]
+    register: [Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Good candidate for comparison against English 'colleague/coworker' — worth checking whether it carries any warmth English 'colleague' lacks."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic]
+    evidence: []
+
+  - id: ar_nadim
+    language: Arabic
+    script: نديم
+    transliteration: nadīm
+    root: ن-د-م
+    morphology: "faʿīl-pattern noun; classical lexicographers debate its link to nadima ('to regret') vs. a distinct sense nādama ('to keep company drinking/carousing')"
+    glosses: [drinking companion, boon companion, convivial companion]
+    domains: [social association, companionship]
+    usage:
+      classical: "Well attested in Abbasid-era court and poetic literature as the king's or poet's constant companion in wine-drinking gatherings."
+      modern: "Largely archaic/literary; not in everyday use."
+    likely_dimensions: [companionship, shared leisure/circumstance, moderate intimacy]
+    register: [Classical Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Etymology is genuinely disputed in the classical lexicons — flag this rather than asserting a clean derivation from 'regret.'"
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  - id: ar_qarin
+    language: Arabic
+    script: قرين
+    transliteration: qarīn
+    root: ق-ر-ن
+    morphology: "faʿīl-pattern noun from qarana, 'to join, pair, couple'"
+    glosses: [close companion, counterpart, paired one]
+    domains: [social association, companionship]
+    usage:
+      classical: "Used in Islamic theology for an attendant/counterpart (including a jinn companion in some Qur'anic and hadith usage)."
+      modern: "General literary word for a close, paired companion; less common colloquially."
+    likely_dimensions: [companionship, pairing/duality]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The theological 'attendant/jinn companion' sense is a distinct semantic layer from ordinary companionship — worth its own note in Phase 4."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  # ── FRIENDSHIP / INTIMACY ───────────────────────────────────────────
+  - id: ar_sadiq
+    language: Arabic
+    script: صديق
+    transliteration: ṣadīq
+    root: ص-د-ق
+    morphology: "faʿīl-pattern noun from ṣadaqa, 'to be truthful, sincere'"
+    glosses: [friend, sincere friend]
+    domains: [friendship]
+    usage:
+      classical: "General friendship term historically linked to sincerity/truthfulness at the root level."
+      modern: "The ordinary, unmarked word for 'friend' in everyday MSA and most dialects."
+    likely_dimensions: [intimacy, sincerity, companionship]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Etymology (root ṣ-d-q, 'truthfulness') should not be equated with contemporary meaning, but is an important historical dimension to investigate — this is the default term most bilingual dictionaries gloss simply as 'friend.'"
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  - id: ar_anis
+    language: Arabic
+    script: أنيس
+    transliteration: anīs
+    root: أ-ن-س
+    morphology: "faʿīl-pattern noun/adjective from anisa, 'to be sociable, feel at ease with'"
+    glosses: [congenial companion, comforting companion, one whose presence dispels loneliness]
+    domains: [friendship, companionship]
+    usage:
+      classical: "Same root as insān (human being) and uns (sociability/intimacy); describes companionship defined by the psychological comfort it produces."
+      modern: "Also survives as a common given name (Anas/Anīs)."
+    likely_dimensions: [emotional comfort, companionship, low formality]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Notable for describing the emotional effect of companionship (relief from loneliness) rather than a structural relationship category — a good candidate for a distinct 'affect produced' dimension."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  - id: ar_hamim
+    language: Arabic
+    script: حميم
+    transliteration: ḥamīm
+    root: ح-م-م
+    morphology: "faʿīl-pattern adjective/noun; same root also yields ḥamīm, 'boiling water' (a Qur'anic homonym)"
+    glosses: [intimate, close friend, very close companion]
+    domains: [friendship]
+    usage:
+      classical: "Qur'anic: 'wa-lā ṣadīqin ḥamīm' (26:101), 'nor a close/intimate friend' — establishes ḥamīm as an intensifier of ṣadīq."
+      modern: "Common collocation ṣadīq ḥamīm, 'close/intimate friend'; also used for close relatives."
+    likely_dimensions: [high intimacy]
+    register: [Classical Arabic, Qur'anic Arabic, Modern Standard Arabic]
+    example_usage: "صديق حميم — ṣadīq ḥamīm, 'intimate/close friend' (cf. Qur'an 26:101)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The root's dual sense ('heat/closeness' and 'boiling water') is a striking case for the etymology-vs-meaning warning in the README — worth flagging, not over-interpreting."
+      - "Functions largely as an intimacy intensifier on ṣadīq rather than a standalone category — relevant to how the graph ontology models STRONGER_INTIMACY_THAN edges."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  - id: ar_khalil
+    language: Arabic
+    script: خليل
+    transliteration: khalīl
+    root: خ-ل-ل
+    morphology: "faʿīl-pattern noun from khalla, 'to penetrate, pass through' (via khilāl, 'in the midst of, through')"
+    glosses: [intimate friend, deeply beloved friend, exceptionally close companion]
+    domains: [friendship, affection]
+    usage:
+      classical: "'Khalīl Allāh' (Friend of God) is the classical epithet for the Prophet Ibrahim/Abraham — one of the strongest friendship concepts in the tradition."
+      modern: "Still used for an intimate friend, though somewhat elevated/literary; 'Khalīl' is also a common given name."
+    likely_dimensions: [very high intimacy, affection, exclusivity]
+    register: [Classical Arabic, religious usage, Modern Standard Arabic]
+    example_usage: "خليل الله — Khalīl Allāh, 'Friend of God' (epithet of Ibrahim/Abraham)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The religious epithet gives this term unusually strong, culturally loaded connotations — its ordinary and religious registers should probably be tracked as separate senses."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  # ── AFFECTION / LOVE ─────────────────────────────────────────────────
+  - id: ar_habib
+    language: Arabic
+    script: حبيب
+    transliteration: ḥabīb
+    root: ح-ب-ب
+    morphology: "faʿīl-pattern noun/adjective from ḥabba, 'to love'"
+    glosses: [beloved, dear one, loved person]
+    domains: [affection, love]
+    usage:
+      classical: "Broad affection term used across romantic, familial, and platonic contexts; central to classical love poetry (ghazal)."
+      modern: "Extremely common term of endearment across contexts (romantic partner, close friend, family member, or as a general address term)."
+    likely_dimensions: [affection, variable intimacy, context-dependent domain (romantic/familial/platonic)]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Belongs primarily on an affection/love dimension rather than representing 'stronger friendship' — its relational domain (romantic vs. familial vs. friendly) is set entirely by context, which the dataset should capture separately from the affection intensity itself."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_wadud
+    language: Arabic
+    script: ودود
+    transliteration: wadūd
+    root: و-د-د
+    morphology: "faʿūl-pattern (intensive) adjective from wadda, 'to love, wish well'"
+    glosses: [loving, affectionate, warmly disposed]
+    domains: [affection, love]
+    usage:
+      classical: "'Al-Wadūd' (The Loving) is one of the 99 names of Allah, giving the root strong theological resonance."
+      modern: "Used adjectivally to describe an affectionate disposition; also a given name."
+    likely_dimensions: [affection, warmth]
+    register: [Classical Arabic, religious usage, Modern Standard Arabic]
+    example_usage: "الودود — al-Wadūd, 'The Loving' (a divine name)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Grammatically an adjective/disposition term rather than a noun naming a relationship category — should be modeled as a modifier or dimension-marker rather than a node parallel to ṣadīq or rafīq."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_aziz
+    language: Arabic
+    script: عزيز
+    transliteration: ʿazīz
+    root: ع-ز-ز
+    morphology: "faʿīl-pattern adjective from ʿazza, 'to be dear, precious; to be mighty, powerful'"
+    glosses: [dear, precious, beloved (also: mighty, powerful)]
+    domains: [affection]
+    usage:
+      classical: "Carries a dual sense of 'precious/dear' and 'mighty/powerful'; 'Al-ʿAzīz' is also a divine name (The Almighty)."
+      modern: "Common term of address/endearment ('ʿazīzī,' 'my dear') independent of the 'mighty' sense, which survives mainly in formal/religious registers."
+    likely_dimensions: [affection, esteem]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: "عزيزي — ʿazīzī, 'my dear' (common salutation, e.g. in letters)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The affection sense and the power/status sense appear to have diverged enough in modern usage that they may need to be modeled as distinct senses of the same lemma."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  # ── ALLIANCE / LOYALTY / PROTECTION / TRUST ─────────────────────────
+  - id: ar_wali
+    language: Arabic
+    script: ولي
+    transliteration: walī
+    root: و-ل-ي
+    morphology: "faʿīl-pattern noun from waliya, 'to be near to, have charge/authority over'"
+    glosses: [ally, protector, patron, guardian, supporter, saint (Sufi usage)]
+    domains: [alliance, loyalty, protection, authority]
+    usage:
+      classical: "Extremely broad semantic field: legal guardian (walī al-amr), religious 'saint/friend of God' (walī Allāh), political ruler, or ally, depending entirely on context."
+      modern: "Retains legal sense (guardian of a minor, walī al-amr) and religious sense (Sufi saint); less used for ordinary friendship."
+    likely_dimensions: [protection, obligation, authority, variable intimacy]
+    register: [Classical Arabic, religious usage, Modern Standard Arabic, legal usage]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The single strongest example in this dataset of why a one-dimensional friendship scale fails: a walī relationship can combine protection, loyalty, obligation, authority, and patronage without any of the intimacy or companionship implied by ṣadīq."
+      - "Shares a root with mawlā (ar_mawla) — the two should be checked for historical divergence."
+    sources_to_consult: [Qur'anic concordance, Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon, classical fiqh glossaries]
+    evidence: []
+
+  - id: ar_halif
+    language: Arabic
+    script: حليف
+    transliteration: ḥalīf
+    root: ح-ل-ف
+    morphology: "faʿīl-pattern noun from ḥalafa, 'to swear an oath'"
+    glosses: [ally, confederate, sworn ally]
+    domains: [alliance]
+    usage:
+      classical: "Grounded in oath-taking; pre-Islamic Arabia had formal alliance pacts (ḥilf), e.g. the famous Ḥilf al-Fuḍūl."
+      modern: "Standard MSA word for a political/military ally (e.g. in news media, 'ḥulafāʾ' for 'allies')."
+    likely_dimensions: [alliance, obligation, low intimacy]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: "حلف الفضول — Ḥilf al-Fuḍūl, a famous pre-Islamic alliance pact in Mecca"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Organized around alliance/commitment via formal oath rather than affection or intimacy — a clean contrast case against ḥabīb."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_amin
+    language: Arabic
+    script: أمين
+    transliteration: amīn
+    root: أ-م-ن
+    morphology: "faʿīl-pattern adjective/noun from amina, 'to be safe, to trust'"
+    glosses: [trustworthy person, confidant, custodian, treasurer]
+    domains: [trust]
+    usage:
+      classical: "'Al-Amīn' (The Trustworthy) was the epithet given to Muhammad before his prophethood, reflecting the term's high social weight."
+      modern: "Used for trustworthy individuals generally, and as a formal title (amīn al-ʿāmm, 'secretary-general'; amīn al-ṣundūq, 'treasurer')."
+    likely_dimensions: [trust, reliability]
+    register: [Classical Arabic, Modern Standard Arabic, formal/institutional usage]
+    example_usage: "الأمين — al-Amīn, 'The Trustworthy' (pre-prophetic epithet of Muhammad)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Good candidate for anchoring a 'trust' dimension, which the README lists as a possible later addition to the core 8-dimension model — closest to English 'confidant' but built on reliability rather than disclosure."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_kafil
+    language: Arabic
+    script: كفيل
+    transliteration: kafīl
+    root: ك-ف-ل
+    morphology: "faʿīl-pattern noun from kafala, 'to guarantee, sponsor, be responsible for'"
+    glosses: [guarantor, sponsor, one who vouches for another]
+    domains: [obligation, protection]
+    usage:
+      classical: "Legal/financial guarantor sense; also used for one who takes on the care of an orphan or dependent (kafālat al-yatīm)."
+      modern: "Central to the modern kafāla labor-sponsorship system in Gulf states, where an employer/sponsor holds legal responsibility for a foreign worker."
+    likely_dimensions: [obligation, protection, formal/legal duty, power asymmetry]
+    register: [Classical Arabic, Modern Standard Arabic, legal usage]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The modern kafāla labor system gives this term a live, socially significant (and often contested) modern usage worth documenting separately from the classical guardianship sense."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, classical fiqh glossaries, contemporary labor-law sources]
+    evidence: []
+
+  - id: ar_mawla
+    language: Arabic
+    script: مولى
+    transliteration: mawlā
+    root: و-ل-ي
+    morphology: "maf ʿal-pattern noun from the same root as walī"
+    glosses: [patron, client, freed slave, master, cousin/kinsman (context-dependent)]
+    domains: [alliance, protection, kinship, authority]
+    usage:
+      classical: "One of the most context-dependent terms in the classical lexicon: can mean patron, client, freed slave, ally, master, or kinsman depending entirely on context — early Islamic history's mawālī (non-Arab converts under patronage) is a major institution built on this term."
+      modern: "Largely archaic outside historical/religious/legal discussion; 'mawlāya' ('my lord') survives in some address forms."
+    likely_dimensions: [protection, obligation, authority, kinship (variable)]
+    register: [Classical Arabic, historical usage]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Shares a root with walī (ar_wali) and shows the same problem of context-dependent polysemy taken even further — the mawālī institution is a strong example for the 'social structure' research question in the README."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab, early Islamic historical sources]
+    evidence: []
+
+  # ── KINSHIP ──────────────────────────────────────────────────────────
+  - id: ar_qarib
+    language: Arabic
+    script: قريب
+    transliteration: qarīb
+    root: ق-ر-ب
+    morphology: "faʿīl-pattern adjective/noun from qaruba, 'to be near'"
+    glosses: [near, close, a relative]
+    domains: [kinship, proximity]
+    usage:
+      classical: "Used both spatially/temporally ('near') and for kin ('a relative, qarīb/aqribāʾ')."
+      modern: "Standard modern word for 'relative'; 'aqāriب' (relatives) is common in everyday speech."
+    likely_dimensions: [kinship, proximity]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The overlap between spatial/temporal 'nearness' and kinship is itself worth investigating — it may indicate that kinship is conceptually modeled as a form of closeness rather than a separate category in the source language."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_rahim
+    language: Arabic
+    script: رحم
+    transliteration: raḥim
+    root: ر-ح-م
+    morphology: "noun, same root as raḥma ('mercy') and raḥīm/al-Raḥmān (divine names)"
+    glosses: [womb, blood relationship, kinship tie]
+    domains: [kinship]
+    usage:
+      classical: "'Ṣilat al-raḥim' (maintaining kinship ties) is a major ethical/religious obligation in the Islamic tradition, directly linking kinship terminology to the root for mercy."
+      modern: "Retains both the literal anatomical sense and the extended kinship sense; ṣilat al-raḥim remains common in religious and everyday moral discourse."
+    likely_dimensions: [kinship, obligation]
+    register: [Classical Arabic, Qur'anic Arabic, Modern Standard Arabic]
+    example_usage: "صلة الرحم — ṣilat al-raḥim, 'maintaining kinship/family ties' (a recognized religious and social duty)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Kinship here is explicitly tied to an obligation (ṣila, 'maintaining/upholding ties') rather than modeled as a passive fact of blood relation — worth capturing as an obligation-kinship compound rather than pure kinship."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon, Lisan al-Arab]
+    evidence: []
+
+  - id: ar_akh
+    language: Arabic
+    script: أخ
+    transliteration: akh
+    root: أ-خ-و
+    morphology: "primitive kinship noun"
+    glosses: [brother]
+    domains: [kinship]
+    usage:
+      classical: "Literal sibling term; also used metaphorically for close non-kin bonds (religious 'brotherhood,' fraternal alliance)."
+      modern: "Also a very common informal address term for a close male friend or even a stranger (colloquial 'akhī,' 'my brother'), independent of actual kinship."
+    likely_dimensions: [kinship, affection (metaphorical extension), companionship]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: "أخي — akhī, 'my brother' (used for actual siblings and, colloquially, close friends/strangers)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The metaphorical extension to non-kin close friends/strangers is an important case for the graph ontology's TRANSLATED_AS / CONTRASTS_WITH edges — 'brother' in English has a similar but not identical informal extension."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, dialect corpora]
+    evidence: []
+
+  - id: ar_ukht
+    language: Arabic
+    script: أخت
+    transliteration: ukht
+    root: أ-خ-و
+    morphology: "feminine counterpart of akh"
+    glosses: [sister]
+    domains: [kinship]
+    usage:
+      classical: "Literal sibling term, feminine."
+      modern: "Also extended informally/religiously to close female friends or fellow community members ('ukhtī,' 'my sister'), parallel to akh."
+    likely_dimensions: [kinship, affection (metaphorical extension), companionship]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Should be tracked alongside akh (ar_akh) as a gendered pair rather than duplicated analysis — the metaphorical extension pattern is the same."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic]
+    evidence: []
+
+  - id: ar_amm
+    language: Arabic
+    script: عم
+    transliteration: ʿamm
+    root: ع-م-م
+    morphology: "primitive kinship noun; root also yields ʿāmm, 'general, public, common'"
+    glosses: [paternal uncle]
+    domains: [kinship]
+    usage:
+      classical: "Specifically the father's brother, distinct in classical genealogical reckoning from the mother's brother (khāl)."
+      modern: "Also used as a respectful address term for an older man generally, regardless of actual kinship."
+    likely_dimensions: [kinship, patrilineal specificity]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Pairs with khāl (ar_khal) to show that Arabic lexically distinguishes paternal vs. maternal uncle where English collapses both to 'uncle' — a direct, clean example for the 'Lexical Granularity' research question in the README."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, classical genealogical sources]
+    evidence: []
+
+  - id: ar_khal
+    language: Arabic
+    script: خال
+    transliteration: khāl
+    root: خ-و-ل
+    morphology: "primitive kinship noun"
+    glosses: [maternal uncle]
+    domains: [kinship]
+    usage:
+      classical: "Specifically the mother's brother, lexically distinct from ʿamm (paternal uncle)."
+      modern: "Retains the same distinction; both terms remain in everyday use across dialects."
+    likely_dimensions: [kinship, matrilineal specificity]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "See ar_amm — this pair is one of the strongest, least ambiguous cases of finer Arabic lexical resolution in the kinship domain relative to English."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, classical genealogical sources]
+    evidence: []
+
+  # ── MARRIAGE / PARTNERSHIP ──────────────────────────────────────────
+  - id: ar_zawj
+    language: Arabic
+    script: زوج
+    transliteration: zawj
+    root: ز-و-ج
+    morphology: "noun from zawwaja, 'to pair, to marry (someone) to'"
+    glosses: [spouse, husband, a member of a pair]
+    domains: [marriage, kinship]
+    usage:
+      classical: "Qur'anic usage frequently treats zawj as 'mate/pair' (e.g. Adam and his zawj), not gender-specific at the root level."
+      modern: "Standard word for 'husband'; zawjān/azwāj also used for 'a couple/pairs' generally."
+    likely_dimensions: [kinship, duration, obligation, intimacy]
+    register: [Classical Arabic, Qur'anic Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Root sense of 'pairing' (also used for pairs of objects, e.g. shoes) is broader than the marital sense alone — worth tracking as a 'pair/partner' concept distinct from purely marital vocabulary."
+    sources_to_consult: [Qur'anic concordance, Hans Wehr Dictionary of Modern Written Arabic]
+    evidence: []
+
+  - id: ar_zawja
+    language: Arabic
+    script: زوجة
+    transliteration: zawja
+    root: ز-و-ج
+    morphology: "feminine form of zawj"
+    glosses: [wife]
+    domains: [marriage, kinship]
+    usage:
+      classical: "Feminine marital counterpart; less prominent in Qur'anic usage than the unmarked zawj."
+      modern: "Standard everyday word for 'wife.'"
+    likely_dimensions: [kinship, duration, obligation, intimacy]
+    register: [Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Track alongside zawj (ar_zawj); worth noting the diachronic shift from the gender-neutral Qur'anic zawj to the modern gendered zawj/zawja pair."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic]
+    evidence: []
+
+  - id: ar_ashir
+    language: Arabic
+    script: عشير
+    transliteration: ʿashīr
+    root: ع-ش-ر
+    morphology: "faʿīl-pattern noun from ʿāshara, 'to live with, associate intimately with'"
+    glosses: [intimate companion, spouse (classical), close associate]
+    domains: [marriage, companionship, intimacy]
+    usage:
+      classical: "Qur'an 4:19 instructs 'wa-ʿāshirūhunna bi-l-maʿrūf' ('live with them in kindness'), grounding the root in the daily conduct of marital/intimate cohabitation."
+      modern: "Rare in everyday speech; muʿāshara ('cohabitation/intimate association') remains current in formal/legal and religious writing about marriage."
+    likely_dimensions: [intimacy, companionship, duration, kinship (marital)]
+    register: [Classical Arabic, Qur'anic Arabic]
+    example_usage: "وعاشروهن بالمعروف — wa-ʿāshirūhunna bi-l-maʿrūf, 'and live with them in kindness' (Qur'an 4:19)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Defines intimacy through daily cohabitation/conduct rather than emotional disclosure — a useful contrast to ḥamīm/khalīl, which are closer to a Western 'confidant' notion of intimacy."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon, classical tafsir]
+    evidence: []
+
+  - id: ar_sharik
+    language: Arabic
+    script: شريك
+    transliteration: sharīk
+    root: ش-ر-ك
+    morphology: "faʿīl-pattern noun from sharaka, 'to share, be a partner in'"
+    glosses: [partner, associate (business, marital, or otherwise)]
+    domains: [partnership]
+    usage:
+      classical: "Also carries the theologically loaded sense of shirk ('partner to God,' i.e. polytheism) from the same root — a strongly marked negative sense in Islamic theology alongside the neutral 'business partner' sense."
+      modern: "Standard word for a business partner (sharīk fī l-ʿamal) or, informally, a life partner."
+    likely_dimensions: [obligation, shared stake/interest, variable intimacy]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The shirk (theological 'partner to God' = polytheism) sense from the same root is a striking case where the same root produces a strongly negative theological term and a neutral everyday partnership term — flag rather than conflate."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Qur'anic concordance]
+    evidence: []
+
+  # ── HOSPITALITY / PROXIMITY ─────────────────────────────────────────
+  - id: ar_jar
+    language: Arabic
+    script: جار
+    transliteration: jār
+    root: ج-و-ر
+    morphology: "active-participle-pattern noun from jāwara, 'to be adjacent to'; the same root also yields jāra ('to wrong, oppress, deviate'), whose exact relation to the 'neighbor' sense is debated in the classical lexicons"
+    glosses: [neighbor]
+    domains: [proximity, social obligation]
+    usage:
+      classical: "Jiwār (neighborliness) carries strong ethical weight in the Islamic tradition — hadith literature repeatedly emphasizes obligations toward one's jār."
+      modern: "Standard everyday word for 'neighbor,' retaining a social-obligation connotation stronger than the English word typically carries."
+    likely_dimensions: [proximity, obligation, low-to-moderate intimacy]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Verify the exact classical-lexicon relationship between jār ('neighbor') and jāra ('to oppress/wrong') before asserting a shared derivation — treat as an open etymological question, not a settled fact."
+      - "The ethical/obligation weight attached to jiwār may be a case where Arabic lexicalizes a social-structural obligation more heavily than English 'neighbor' does — relevant to the 'Social Structure' research question."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab, hadith literature on jiwār]
+    evidence: []
+
+  - id: ar_dayf
+    language: Arabic
+    script: ضيف
+    transliteration: ḍayf
+    root: ض-ي-ف
+    morphology: "noun from ḍāfa, 'to seek lodging/hospitality with'; the same root underlies the grammatical term iḍāfa ('annexation/attachment')"
+    glosses: [guest]
+    domains: [hospitality]
+    usage:
+      classical: "Hospitality toward the ḍayf (guest) — including the stranger-guest — is a heavily valorized pre-Islamic and Islamic virtue (ḍiyāfa)."
+      modern: "Standard word for 'guest'; ḍiyāfa remains a culturally significant concept in everyday hospitality norms."
+    likely_dimensions: [obligation (host's duty), temporary/short duration, protection]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Pairs with muḍīf (ar_mudif, 'host') as a role-pair rather than a mutual/symmetric relationship term — worth modeling as directional (HOST → GUEST) in the graph ontology."
+      - "The cultural weight of ḍiyāfa (hospitality) toward even a total stranger is a good test case for the 'Social Structure' research question."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Lisan al-Arab, pre-Islamic poetry on hospitality]
+    evidence: []
+
+  - id: ar_mudif
+    language: Arabic
+    script: مضيف
+    transliteration: muḍīf
+    root: ض-ي-ف
+    morphology: "Form IV active participle (mufʿil) of the same root as ḍayf"
+    glosses: [host]
+    domains: [hospitality]
+    usage:
+      classical: "The obligated party in the ḍiyāfa (hospitality) relationship, bound by strong customary duties toward the ḍayf."
+      modern: "Standard word for 'host'; also used for a flight attendant (muḍīf/muḍīfa) in modern usage — a notable semantic extension."
+    likely_dimensions: [obligation (duty of hospitality), protection, temporary/short duration]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The extension to 'flight attendant' is a good example of a term's relationship-domain sense narrowing into a professional-role sense in modern usage — worth tracking as a register split."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  # ── MENTORSHIP / HIERARCHY ──────────────────────────────────────────
+  - id: ar_muallim
+    language: Arabic
+    script: معلم
+    transliteration: muʿallim
+    root: ع-ل-م
+    morphology: "Form II active participle (mufaʿʿil) of ʿallama, 'to teach'"
+    glosses: [teacher, instructor]
+    domains: [mentorship, hierarchy]
+    usage:
+      classical: "General term for one who imparts knowledge; also historically used as an honorific for craftsmen/guild masters."
+      modern: "Standard word for 'teacher' in formal education."
+    likely_dimensions: [obligation (duty to instruct), formality, hierarchy]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Pairs with tilmīdh (ar_tilmidh, 'student') as an asymmetric hierarchical relationship, distinct from the more spiritually loaded shaykh/murīd pair."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic]
+    evidence: []
+
+  - id: ar_tilmidh
+    language: Arabic
+    script: تلميذ
+    transliteration: tilmīdh
+    root: "uncertain — not a clean native triliteral root; possibly an early loan (compare Aramaic/Syriac talmīdā, 'disciple, student')"
+    morphology: "noun, irregular pattern consistent with a loanword"
+    glosses: [student, pupil, disciple]
+    domains: [mentorship, hierarchy]
+    usage:
+      classical: "Used for a student/disciple of a scholar or master."
+      modern: "Standard word for 'pupil/schoolchild' in formal education."
+    likely_dimensions: [obligation, hierarchy, formality]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Etymology should be verified rather than assumed — the possible Aramaic/Syriac loan origin (parallel to Hebrew talmid) is a case worth checking against a specialist etymological source before citing as fact."
+    sources_to_consult: [Lane's Arabic-English Lexicon, comparative Semitic etymological dictionaries]
+    evidence: []
+
+  - id: ar_murid
+    language: Arabic
+    script: مريد
+    transliteration: murīd
+    root: ر-و-د
+    morphology: "active participle (fāʿil, from a hollow root) of arāda, 'to want, seek, will'"
+    glosses: [disciple, spiritual seeker (Sufi usage)]
+    domains: [mentorship, hierarchy, religious usage]
+    usage:
+      classical: "Specifically the Sufi disciple of a shaykh, defined by intentional 'seeking/willing' (irāda) rather than mere instruction."
+      modern: "Still used in Sufi contexts; not a general word for 'student' (that role is tilmīdh/ṭālib)."
+    likely_dimensions: [obligation, hierarchy, devotion, duration]
+    register: [Classical Arabic, religious/Sufi usage]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Pairs with shaykh (ar_shaykh) as a specifically Sufi hierarchical relationship distinct from the more generic muʿallim/tilmīdh pair — the two mentorship pairs should not be collapsed into one node."
+    sources_to_consult: [Lane's Arabic-English Lexicon, Sufi primary sources]
+    evidence: []
+
+  - id: ar_shaykh
+    language: Arabic
+    script: شيخ
+    transliteration: shaykh
+    root: ش-ي-خ
+    morphology: "noun from shākha, 'to grow old'"
+    glosses: [elder, tribal leader, religious/spiritual master, honorific title]
+    domains: [hierarchy, mentorship, authority]
+    usage:
+      classical: "Denotes an elder with authority — tribal leader, religious scholar, or Sufi spiritual guide, depending on context."
+      modern: "Retains all these senses plus use as a general honorific/title (including for rulers in some Gulf states)."
+    likely_dimensions: [hierarchy, authority, obligation, protection]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Highly context-dependent like walī and mawlā — another strong case against treating any single Arabic term as having one fixed relational meaning."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_sayyid
+    language: Arabic
+    script: سيد
+    transliteration: sayyid
+    root: س-و-د
+    morphology: "noun from sāda, 'to be master of, hold dominion over'"
+    glosses: [master, lord, chief; also an honorific for descendants of the Prophet]
+    domains: [hierarchy, authority]
+    usage:
+      classical: "Denotes a tribal chief or master; also became an honorific specifically for those tracing descent from the Prophet Muhammad."
+      modern: "General polite title equivalent to 'Mr.' (sayyid/sayyidī), alongside the retained genealogical-honorific sense."
+    likely_dimensions: [hierarchy, authority, formality]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Illustrates semantic bleaching: a term for tribal/social dominance has become an everyday polite address form ('Mr.') in modern usage, alongside its still-active genealogical-honorific sense."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_abd
+    language: Arabic
+    script: عبد
+    transliteration: ʿabd
+    root: ع-ب-د
+    morphology: "noun from ʿabada, 'to worship, serve'"
+    glosses: [servant, slave; worshipper/servant (of God) in religious usage]
+    domains: [hierarchy, obligation]
+    usage:
+      classical: "Denotes both literal servitude/slavery and, pervasively in religious usage, the relationship of a human 'servant' to God (ʿabd Allāh)."
+      modern: "Literal slavery sense is historical; the religious 'servant of God' sense remains fully productive (common in given names, e.g. ʿAbd al-Raḥmān)."
+    likely_dimensions: [obligation, hierarchy, power asymmetry]
+    register: [Classical Arabic, Qur'anic Arabic, Modern Standard Arabic]
+    example_usage: "عبد الله — ʿAbd Allāh, 'servant of God' (also a common given name)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The historical (slavery) and religious (devotional servanthood) senses need to be tracked as clearly distinct usages — collapsing them would misrepresent both."
+      - "Pairs with sayyid (ar_sayyid) as the low-authority pole of the hierarchy dimension."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon, historical sources on slavery in the Islamic world]
+    evidence: []
+
+  # ── ANTAGONISM ───────────────────────────────────────────────────────
+  - id: ar_khasm
+    language: Arabic
+    script: خصم
+    transliteration: khaṣm
+    root: خ-ص-م
+    morphology: "noun from khaṣama, 'to dispute, litigate against'"
+    glosses: [opponent, adversary, disputant, opposing party (legal)]
+    domains: [antagonism]
+    usage:
+      classical: "Strong legal/dispute register — khaṣm is the standard term for an opposing party in litigation."
+      modern: "Retains the legal sense (khaṣm fī qaḍiyya, 'opposing party in a case') and extends to general rivals/opponents (e.g. in sport)."
+    likely_dimensions: [conflict, low-to-moderate hostility, formal opposition]
+    register: [Classical Arabic, Modern Standard Arabic, legal usage]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "More formal/procedural than ʿaduww — an opposing party in a structured dispute rather than a personal enemy; the two should be kept as distinct antagonism sub-types."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, classical legal glossaries]
+    evidence: []
+
+  - id: ar_aduww
+    language: Arabic
+    script: عدو
+    transliteration: ʿaduww
+    root: ع-د-و
+    morphology: "faʿūl-pattern noun from ʿadā, 'to run; to transgress, be hostile'"
+    glosses: [enemy]
+    domains: [antagonism]
+    usage:
+      classical: "General, strong word for 'enemy'; frequent in Qur'anic and classical usage (e.g. Satan as 'ʿaduww mubīn,' 'a clear enemy')."
+      modern: "Standard everyday word for 'enemy,' personal or collective/national."
+    likely_dimensions: [high hostility, conflict]
+    register: [Classical Arabic, Qur'anic Arabic, Modern Standard Arabic]
+    example_usage: "عدو مبين — ʿaduww mubīn, 'a clear/manifest enemy' (Qur'anic epithet for Satan)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The unmarked, general antagonism term — functions as the negative-space anchor point opposite ṣadīq, the way gharīb anchors the low-familiarity end."
+    sources_to_consult: [Qur'anic concordance, Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_hasid
+    language: Arabic
+    script: حاسد
+    transliteration: ḥāsid
+    root: ح-س-د
+    morphology: "active participle (fāʿil) of ḥasada, 'to envy'"
+    glosses: [envier, one who envies]
+    domains: [antagonism]
+    usage:
+      classical: "Envy (ḥasad) is treated as a significant moral/spiritual danger in the Islamic tradition (cf. Surat al-Falaq, seeking refuge from 'the envier when he envies')."
+      modern: "Still used for a person motivated by envy/jealousy toward another's fortune."
+    likely_dimensions: [covert hostility, low trust, asymmetric resentment]
+    register: [Classical Arabic, Qur'anic Arabic, Modern Standard Arabic]
+    example_usage: "ومن شر حاسد إذا حسد — 'and from the evil of an envier when he envies' (Qur'an 113:5)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "A distinctly covert/asymmetric form of antagonism — unlike ʿaduww or khaṣm, a ḥāsid relationship may not be mutually acknowledged by both parties, which the graph model should represent as a directional rather than symmetric edge."
+    sources_to_consult: [Qur'anic concordance, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_munafis
+    language: Arabic
+    script: منافس
+    transliteration: munāfis
+    root: ن-ف-س
+    morphology: "Form III active participle (mufāʿil) of nāfasa, 'to compete, vie with'; same root as nafs ('self/soul')"
+    glosses: [rival, competitor]
+    domains: [antagonism, competition]
+    usage:
+      classical: "Competitive rivalry, often without the moral condemnation attached to ḥasad (envy)."
+      modern: "Standard word for 'competitor' in sport, business, and other contested-but-not-necessarily-hostile domains."
+    likely_dimensions: [competition, low-to-moderate hostility, mutual acknowledgment]
+    register: [Classical Arabic, Modern Standard Arabic]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "A comparatively 'neutral' antagonism term — worth checking whether it carries less moral weight than ḥasid or ʿaduww, which would make it a useful low-intensity anchor on the hostility axis."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []
+
+  - id: ar_ghayur
+    language: Arabic
+    script: غيور
+    transliteration: ghayūr
+    root: غ-ي-ر
+    morphology: "faʿūl-pattern (intensive) adjective from ghāra, 'to be jealous, protective'"
+    glosses: [jealous, (protectively) possessive]
+    domains: [ambivalent — protection and possessiveness]
+    usage:
+      classical: "Ghayra denotes a protective jealousy over one's family, honor, or loved ones — historically framed as a virtue (protectiveness) as much as a vice (possessiveness)."
+      modern: "Used both approvingly (a spouse described as ghayūr as protective/devoted) and critically (excessive possessiveness/jealousy), depending on context."
+    likely_dimensions: [protection, possessiveness, affection, ambivalent valence]
+    register: [Classical Arabic, Modern Standard Arabic, colloquial]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Genuinely ambivalent term — same root covers both 'protective devotion' and 'possessive jealousy,' which the dimension model should probably capture as a single term with context-dependent valence rather than forcing it into either a purely positive or purely negative domain."
+    sources_to_consult: [Hans Wehr Dictionary of Modern Written Arabic, Lane's Arabic-English Lexicon]
+    evidence: []

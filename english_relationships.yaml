@@ -1,0 +1,790 @@
+# English Relationship Concepts — Phase 3 dataset (see README.md "Next Step" / "Phase 3")
+#
+# Built INDEPENDENTLY of arabic_relationships.yaml: no entry here was chosen
+# or defined by looking for a gloss of an Arabic term. The candidate list is
+# the one already brainstormed from English usage in README.md's "Independent
+# Western / English Ontology" section, expanded with each word's own
+# etymology, register, and usage notes. Any resemblance between an English
+# entry here and an Arabic entry elsewhere in this repo should be treated as
+# a finding to investigate in Phase 6 (Universal Relationship Space mapping),
+# not something assumed while building this file.
+#
+# Same conventions as arabic_relationships.yaml: `dimensions` stays null
+# (no scores yet), `evidence` stays empty until checked against
+# `sources_to_consult`, `example_usage` is filled only where a genuinely
+# established usage/collocation is known.
+
+concepts:
+
+  # ── STRANGER / WEAK TIE ──────────────────────────────────────────────
+  - id: en_stranger
+    language: English
+    lemma: stranger
+    etymology: "Middle English via Old French estrangier < Latin extraneus, 'external, foreign' (root: extra, 'outside')"
+    pos: noun
+    glosses: [an unknown person, someone with no prior relationship to the speaker]
+    domains: [stranger]
+    usage:
+      historical: "Historically carried a stronger sense of 'foreigner/outsider' (cf. 'strange land'), closer to legal/social outsider status than mere unfamiliarity."
+      contemporary: "General word for any unfamiliar person; largely neutral, though 'stranger danger' framing gives it a mild wary connotation in modern usage."
+    likely_dimensions: [low familiarity, low intimacy]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Functions as the low-familiarity anchor point of the English lexicon, parallel in role (not necessarily in meaning) to the low end of any relationship scale."
+    sources_to_consult: [Oxford English Dictionary, Merriam-Webster]
+    evidence: []
+
+  - id: en_acquaintance
+    language: English
+    lemma: acquaintance
+    etymology: "Middle English via Old French acointance < Latin ad- + cognitare, related to cognoscere, 'to come to know'"
+    pos: noun
+    glosses: [a person one knows slightly, short of friendship]
+    domains: [weak tie]
+    usage:
+      historical: "Historically could denote a broader range of familiarity, including close political/social connections ('a person of my acquaintance')."
+      contemporary: "Now specifically marks a relationship below the threshold of 'friend' — someone recognized and greeted but not confided in."
+    likely_dimensions: [low intimacy, low companionship, recognition without closeness]
+    register: [general, slightly formal]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Sits in a specific, well-defined slot in the modern English ladder model (stranger < acquaintance < friend) — a useful test case for whether that ladder model actually holds up once other dimensions are considered."
+    sources_to_consult: [Oxford English Dictionary, Merriam-Webster]
+    evidence: []
+
+  - id: en_contact
+    language: English
+    lemma: contact
+    etymology: "from Latin contactus, past participle of contingere, 'to touch, to be in touch with'"
+    pos: noun
+    glosses: [a person one knows and can reach for a specific purpose, typically professional]
+    domains: [weak tie, professional network]
+    usage:
+      historical: "The physical sense ('a touching, a coming together') predates the personal-relationship sense by centuries."
+      contemporary: "Modern usage as 'a person I can reach out to' is largely a 20th-century extension, strongly tied to professional networking ('I have a contact at that company')."
+    likely_dimensions: [low intimacy, instrumental/transactional value, weak tie]
+    register: [professional, general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Defines the relationship by its instrumental utility (a means of reaching someone or something) rather than by any emotional or social content — a genuinely distinct dimension from acquaintance, which is about recognition/familiarity rather than utility."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_connection
+    language: English
+    lemma: connection
+    etymology: "from Latin connectere, 'to bind together' (com- + nectere, 'to bind')"
+    pos: noun
+    glosses: [a person linked to another through network, background, or influence]
+    domains: [weak tie, professional network]
+    usage:
+      historical: "General sense of 'a link or relation' between people or things is old and broad."
+      contemporary: "Specific modern sense — 'she has connections' / a LinkedIn 'connection' — narrows this to networked, often instrumental, social/professional ties."
+    likely_dimensions: [low intimacy, instrumental value, network position]
+    register: [professional, general, digitally mediated]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The platform-specific sense (a LinkedIn 'connection') is worth tracking as a distinct modern register from the older general sense — see also en_mutual and en_follower for the same digital-mediation pattern."
+    sources_to_consult: [Oxford English Dictionary, contemporary usage corpora (social media)]
+    evidence: []
+
+  # ── PROXIMITY ─────────────────────────────────────────────────────────
+  - id: en_neighbor
+    language: English
+    lemma: neighbor
+    etymology: "Old English neahgebur, compound of neah ('near') + gebur ('dweller, farmer') — literally 'near-dweller'"
+    pos: noun
+    glosses: [a person who lives near you]
+    domains: [proximity]
+    usage:
+      historical: "Old English compound already lexicalized the 'near + dweller' concept directly; carried strong communal/mutual-aid connotations in agrarian society."
+      contemporary: "Retains a residual social-obligation connotation ('be a good neighbor,' 'neighborly') alongside the purely locational sense, though weaker than in earlier usage."
+    likely_dimensions: [proximity, weak-to-moderate obligation, variable intimacy]
+    register: [general]
+    example_usage: "'good neighbor policy' / 'neighborly' (retains an ethical-obligation shade absent from purely locational synonyms)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The compound etymology (near + dweller) shows the concept was lexicalized transparently rather than borrowed — worth comparing register decay over time (agrarian obligation sense vs. modern urban-anonymity usage) as a historical-change question."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  # ── INSTITUTIONAL / PROFESSIONAL ASSOCIATION ────────────────────────
+  - id: en_associate
+    language: English
+    lemma: associate
+    etymology: "from Latin associare, 'to join with' (ad- + sociare, from socius, 'ally, companion')"
+    pos: noun
+    glosses: [a person one works or deals with, without implying friendship]
+    domains: [professional association]
+    usage:
+      historical: "Latin socius (companion/ally/partner) is a notably warmer root than the modern English derivative's cool, business-register usage suggests."
+      contemporary: "Deliberately non-intimate: 'business associate' explicitly excludes/brackets off any personal-friendship claim."
+    likely_dimensions: [low intimacy, formality, professional obligation]
+    register: [professional, formal]
+    example_usage: "'business associate' (a fixed collocation that explicitly marks the relationship as non-personal)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The gap between the warm Latin root (socius, 'companion, ally') and the cool modern English sense is a clean case of semantic narrowing over time, worth flagging for the historical-change research question."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_colleague
+    language: English
+    lemma: colleague
+    etymology: "from Middle French collègue < Latin collega, 'partner in office' (com- + legare, 'to depute, to send as ambassador')"
+    pos: noun
+    glosses: [a fellow member of a profession, workplace, or organization]
+    domains: [professional association]
+    usage:
+      historical: "Latin collega specifically denoted co-officeholders (e.g. Roman consuls), an institutional-peer sense from the start."
+      contemporary: "General word for a co-worker, especially in white-collar/professional register; slightly more formal than 'coworker.'"
+    likely_dimensions: [low-to-moderate intimacy, institutional context, formality]
+    register: [professional, formal]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Institutional-peer sense has been remarkably stable from Latin co-officeholder to modern workplace peer — a case where the semantic domain hasn't shifted much over two millennia."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_coworker
+    language: English
+    lemma: coworker
+    etymology: "native English compound, co- (Latin-derived prefix, 'together') + worker (Old English wyrcan, 'to work')"
+    pos: noun
+    glosses: [a person who works at the same organization or on the same tasks]
+    domains: [professional association]
+    usage:
+      historical: "A comparatively recent compound; not attested with high frequency until industrial/modern white- and blue-collar workplace culture."
+      contemporary: "More casual/neutral register than 'colleague'; used across all job types, not just professional ones."
+    likely_dimensions: [low-to-moderate intimacy, institutional context, informal-to-neutral formality]
+    register: [general, informal-to-neutral]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Near-synonym of colleague but with a register split (colleague = more formal/professional, coworker = more general/casual) worth capturing as a formality-axis distinction rather than treating the pair as fully interchangeable."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_peer
+    language: English
+    lemma: peer
+    etymology: "Middle English via Old French per < Latin par, 'equal'"
+    pos: noun
+    glosses: [a person of equal standing — in age, rank, ability, or social status]
+    domains: [professional association, social status]
+    usage:
+      historical: "Legal/aristocratic sense ('peer of the realm') long predates the general social-equality sense."
+      contemporary: "Widely used for status-matched relationships across contexts: 'peer review,' 'peer pressure,' 'peer group' — defined by equality of standing rather than by any specific institution."
+    likely_dimensions: [equality of status, low-to-moderate intimacy, variable companionship]
+    register: [general, professional, academic]
+    example_usage: "'peer review,' 'peer pressure' (fixed collocations built on the equality sense)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Unusual in this list for being defined purely by a structural property (equality of rank/status) rather than by companionship, affection, or institution — arguably names a dimension (status-parity) rather than a relationship type in its own right."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_classmate
+    language: English
+    lemma: classmate
+    etymology: "compound, class (Latin classis, 'a group called to service/assembly') + mate (Middle Low German gemate, 'one eating at the same table, a messmate')"
+    pos: noun
+    glosses: [a person in the same school class]
+    domains: [institutional association]
+    usage:
+      historical: "'Mate' compounds (classmate, roommate, teammate) are a productive Germanic word-formation pattern in English, all built on the older 'one who shares a table/mess' sense of mate."
+      contemporary: "Neutral, institution-bound term; carries no inherent intimacy claim beyond shared institutional context."
+    likely_dimensions: [institutional context, low-to-moderate companionship, bounded duration]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Part of a productive 'mate' compound family (classmate/roommate/teammate) that all encode 'shared context' via the same root sense of commensality (eating together) rather than via emotional vocabulary — a structural pattern worth tracking across the three entries."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_roommate
+    language: English
+    lemma: roommate
+    etymology: "compound, room (Old English rum, 'space') + mate (see en_classmate)"
+    pos: noun
+    glosses: [a person who shares a place of residence, without implying romantic or family ties]
+    domains: [institutional/domestic association]
+    usage:
+      historical: "Rises with urban, non-familial shared housing (university dormitories, city apartment-sharing) — a relationship category presupposing housing patterns that didn't exist in the same form earlier."
+      contemporary: "Explicitly used to rule out a romantic/family reading of shared housing ('we're just roommates')."
+    likely_dimensions: [shared domestic proximity, bounded duration, explicitly non-romantic/non-familial]
+    register: [general, informal]
+    example_usage: "'we're just roommates' (a fixed disclaimer construction ruling out a romantic reading)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "A socially/economically contingent category — its productivity depends on a housing pattern (co-residence without kinship or marriage) that is itself a specific modern social arrangement, worth flagging for the 'Social Structure' research question."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_teammate
+    language: English
+    lemma: teammate
+    etymology: "compound, team (Old English team, 'family, group of draft animals') + mate (see en_classmate)"
+    pos: noun
+    glosses: [a fellow member of the same team]
+    domains: [institutional association]
+    usage:
+      historical: "'Team' originally denoted a set of draft animals harnessed together before extending to human cooperative groups."
+      contemporary: "Neutral, activity-bound term (sports, work teams); can carry a moderate companionship/loyalty charge in competitive contexts without implying broader friendship."
+    likely_dimensions: [shared purpose/activity, moderate obligation (to the team), bounded duration]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Distinguished from classmate/roommate in this family by an explicit shared-purpose/goal component (winning, completing a project), which the dataset should capture as a distinct sub-dimension of companionship."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  # ── COMPANIONSHIP / FRIENDSHIP GRADIENT ─────────────────────────────
+  - id: en_companion
+    language: English
+    lemma: companion
+    etymology: "Middle English via Old French compaignon < Late Latin companio, literally com- ('together') + panis ('bread') — 'one who shares bread with you'"
+    pos: noun
+    glosses: [a person who accompanies or spends time with another]
+    domains: [companionship]
+    usage:
+      historical: "Root sense (bread-sharing) grounds companionship in a shared, concrete act rather than in a feeling — structurally similar in kind (though not meaning) to how several Arabic companionship terms are grounded in shared activity."
+      contemporary: "General word for someone who accompanies you (a travel companion, a life companion); softer and vaguer than 'friend,' can imply less or more intimacy depending on context."
+    likely_dimensions: [companionship, variable intimacy and duration]
+    register: [general, slightly literary]
+    example_usage: "'travel companion,' 'lifelong companion'"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The bread-sharing etymology is a strong example of a relationship term grounded in a concrete shared activity rather than in emotional vocabulary — worth flagging as a language-internal (English) instance of the activity-based-companionship pattern, independent of any cross-linguistic comparison."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_friend
+    language: English
+    lemma: friend
+    etymology: "Old English freond, originally the present participle of freogan, 'to love, to favor' (Germanic root also giving 'free')"
+    pos: noun
+    glosses: [a person one knows well and regards with affection, loyalty, and trust]
+    domains: [friendship]
+    usage:
+      historical: "Etymologically a verbal participle ('one who loves/favors') rather than a noun naming a fixed social role — the word itself encodes an ongoing relation, not a status."
+      contemporary: "The unmarked, general word for the category; English marks intensity almost entirely through pre-posed adjectives (close/best/casual friend) rather than through distinct lexical roots."
+    likely_dimensions: [intimacy, affection, companionship, trust]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The single most important structural fact about the English friendship lexicon for this project: English overwhelmingly marks degree of closeness analytically (adjective + friend) rather than through separate lexemes — see en_close_friend, en_best_friend, en_casual_friend, en_buddy, en_pal below for how that plays out."
+      - "Also now productive as a verb ('to friend someone' on social media) — a distinctly 21st-century extension worth noting under register."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_close_friend
+    language: English
+    lemma: close friend
+    etymology: "analytic construction: close (Middle English clos < Latin clausus, 'shut, near') + friend (see en_friend)"
+    pos: "adjective + noun phrase"
+    glosses: [a friend marked by high intimacy and emotional closeness]
+    domains: [friendship]
+    usage:
+      historical: null
+      contemporary: "Standard way to intensify 'friend' along the intimacy axis; 'close' itself is a spatial-nearness metaphor extended to emotional nearness, parallel to en_neighbor's spatial-nearness root but applied metaphorically rather than literally."
+    likely_dimensions: [high intimacy, high affection]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Not a separate lexeme but a fixed adjective+noun intensification pattern — kept as its own entry because the README's original candidate list treats it as a distinct category, but it should be modeled as a MODIFIES/INTENSIFIES edge on 'friend' in the graph ontology rather than as an independent node."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_best_friend
+    language: English
+    lemma: best friend
+    etymology: "analytic construction: best (Old English betst, superlative of god, 'good') + friend"
+    pos: "adjective + noun phrase"
+    glosses: [one's closest, most trusted friend, typically singular/exclusive]
+    domains: [friendship]
+    usage:
+      historical: null
+      contemporary: "Marks both maximal intensity and, often, exclusivity/singularity (implying a ranked 'best' among all friends) — the abbreviation 'BFF' (best friends forever) adds a duration/permanence claim not present in 'best friend' alone."
+    likely_dimensions: [maximal intimacy, exclusivity, claimed permanence]
+    register: [general, informal (especially 'BFF')]
+    example_usage: "'BFF' (best friends forever) — adds an explicit duration/permanence claim absent from the base phrase"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The superlative form ('best') builds in a ranking/exclusivity claim that 'close friend' does not make — worth keeping intimacy and exclusivity as separate sub-dimensions here rather than treating this as simply 'more of' close friend."
+    sources_to_consult: [Oxford English Dictionary, contemporary usage corpora]
+    evidence: []
+
+  - id: en_casual_friend
+    language: English
+    lemma: casual friend
+    etymology: "analytic construction: casual (Latin casualis, 'happening by chance,' from casus, 'fall, chance') + friend"
+    pos: "adjective + noun phrase"
+    glosses: [a friend known lightly, without deep intimacy or regular deliberate contact]
+    domains: [friendship, weak tie]
+    usage:
+      historical: null
+      contemporary: "Marks a friend relationship that is real (crosses the acquaintance threshold) but low-intensity — occupies a middle zone between acquaintance and (unmarked) friend."
+    likely_dimensions: [low-to-moderate intimacy, low obligation]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Its etymological root (casualis, 'by chance') is semantically apt — it marks the relationship as having arisen incidentally rather than been deliberately cultivated, a genuine additional dimension (intentionality/origin) beyond simple intimacy-intensity."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_buddy
+    language: English
+    lemma: buddy
+    etymology: "origin uncertain; possibly an alteration of 'brother,' or from British dialectal 'butty' (a workmate/fellow laborer)"
+    pos: noun
+    glosses: [an informal, friendly companion]
+    domains: [friendship]
+    usage:
+      historical: "First clearly attested in 19th-century American English; the 'butty'/workmate hypothesis would tie it to shared-labor companionship, similar in structure (not meaning) to teammate."
+      contemporary: "Informal, warm, low-stakes register; also used as a direct address term to a stranger ('hey, buddy') independent of any actual friendship."
+    likely_dimensions: [companionship, informality, low-to-moderate intimacy]
+    register: [informal, colloquial]
+    example_usage: "'hey, buddy' (used as a direct address to a stranger, decoupled from the friendship sense entirely)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The address-term usage ('hey, buddy' to a total stranger) is a genuinely distinct sense from the relationship-noun sense and should probably be tracked as a separate function (vocative/address) rather than conflated with the friendship-intensity sense."
+    sources_to_consult: [Oxford English Dictionary, Merriam-Webster]
+    evidence: []
+
+  - id: en_pal
+    language: English
+    lemma: pal
+    etymology: "from Angloromani/Romani pal, 'brother, friend,' ultimately from Sanskrit bhrātā, 'brother' (via Romani migration)"
+    pos: noun
+    glosses: [a close, informal friend]
+    domains: [friendship]
+    usage:
+      historical: "A comparatively rare case of a core English relationship word borrowed from Romani (via Romani-speaking communities in Britain), rather than inherited from Old English or borrowed from Latin/French."
+      contemporary: "Informal, somewhat dated-sounding in casual speech ('pen pal' survives more robustly than standalone 'pal' in everyday use)."
+    likely_dimensions: [companionship, informality, moderate intimacy]
+    register: [informal, somewhat dated]
+    example_usage: "'pen pal' (a specific, still-productive compound denoting a friend maintained purely through correspondence)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Its Romani/Sanskrit etymology (ultimately 'brother') is a striking parallel: multiple unrelated language families independently extend a literal kinship term ('brother') to close non-kin friendship — worth noting as a cross-linguistic pattern to investigate later, without assuming it links specifically to Arabic akh."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  # ── INTIMACY / DISCLOSURE ────────────────────────────────────────────
+  - id: en_confidant
+    language: English
+    lemma: confidant
+    etymology: "French confident/confidente < Italian confidente < Latin confidere, 'to trust fully' (com- + fidere, 'to trust')"
+    pos: noun
+    glosses: [a person one trusts with private thoughts, secrets, or feelings]
+    domains: [intimacy, trust]
+    usage:
+      historical: "Entered English via French/Italian in the 17th century, specifically naming the trust/disclosure function rather than general companionship."
+      contemporary: "Defines the relationship purely by the function of receiving private disclosure — a person can be a confidant without being a frequent companion at all."
+    likely_dimensions: [high intimacy, trust, low requirement of companionship or duration]
+    register: [general, slightly formal/literary]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Notably decouples intimacy/trust from companionship — a useful test case for the README's claim that 'a confidant can have high trust and intimacy without frequent companionship.'"
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  # ── MENTORSHIP / HIERARCHY ──────────────────────────────────────────
+  - id: en_mentor
+    language: English
+    lemma: mentor
+    etymology: "from Mentor, the name of a character in Homer's Odyssey who guides Telemachus — a proper noun that became a common noun"
+    pos: noun
+    glosses: [an experienced advisor who guides a less experienced person]
+    domains: [mentorship, hierarchy]
+    usage:
+      historical: "The eponymous origin (a specific literary character) is unusual among relationship terms in this list, most of which derive from verbs or compounds rather than proper names."
+      contemporary: "Standard word for a guiding, asymmetric-but-supportive relationship in professional, academic, and personal-development contexts."
+    likely_dimensions: [asymmetric obligation, guidance, moderate intimacy, duration]
+    register: [general, professional]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Eponymous origin from a literary character is a distinct etymological category (proper-noun lexicalization) worth tracking separately from the Old English/Latin/French-derived majority of this dataset."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_mentee
+    language: English
+    lemma: mentee
+    etymology: "back-formation from mentor, using the productive English -ee suffix (patient/recipient marker, as in 'employee')"
+    pos: noun
+    glosses: [a person being guided by a mentor]
+    domains: [mentorship, hierarchy]
+    usage:
+      historical: "A recent coinage (attested mainly from the mid-20th century), formed by analogy rather than inherited or borrowed."
+      contemporary: "Standard counterpart to 'mentor'; 'protégé' (French protégé, 'protected one,' from protéger) is a near-synonym with a slightly more formal/dated register."
+    likely_dimensions: [asymmetric obligation, guidance, moderate intimacy]
+    register: [professional, general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "A clean case of morphological productivity: the -ee suffix pattern (employee, trainee, mentee) shows English can mint a new relationship-role word on demand from an existing root, rather than needing a distinct lexeme."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_patron
+    language: English
+    lemma: patron
+    etymology: "Middle English via Old French patron < Latin patronus, 'protector, defender' (from pater, 'father')"
+    pos: noun
+    glosses: [a person who supports, funds, or protects another, an institution, or an artist]
+    domains: [alliance, protection, hierarchy]
+    usage:
+      historical: "Latin patronus named a specific formal Roman social institution (a patron protecting/representing clients) — an asymmetric, obligation-bound bond, not primarily an affectionate one."
+      contemporary: "Retains the support/protection sense (patron of the arts, patron saint) alongside a weaker commercial sense ('patron' of a restaurant, meaning simply 'customer')."
+    likely_dimensions: [protection, obligation, power asymmetry, low-to-variable intimacy]
+    register: [general, formal, historical/institutional]
+    example_usage: "'patron saint' (retains the protector sense); 'patron of the establishment' (weaker, commercial sense meaning simply 'customer')"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Shows real semantic bifurcation: the same word now covers both a strong protective/patronage sense and a nearly contentless commercial sense ('customer') — these should probably be tracked as two distinct modern senses rather than one entry."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_client
+    language: English
+    lemma: client
+    etymology: "Middle English via Old French client < Latin cliens, 'follower, dependent' (related to clinare, 'to lean, incline')"
+    pos: noun
+    glosses: [a person who receives services from a professional, or (historically) a dependent under a patron's protection]
+    domains: [obligation, professional association]
+    usage:
+      historical: "Latin cliens was the direct structural counterpart to patronus — clients and patrons formed a formal, mutually obligated Roman social institution (clientela)."
+      contemporary: "Now almost entirely a commercial/professional term (a lawyer's client, a therapist's client), with the older dependency/protection sense largely gone."
+    likely_dimensions: [low intimacy, formal obligation, professional asymmetry]
+    register: [professional, formal]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Pairs historically with patron (en_patron) as a Roman institutional dyad; worth tracking how thoroughly the protection/obligation content has drained out of 'client' in modern usage compared to how much 'patron' retained."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  # ── ALLIANCE / PARTNERSHIP ───────────────────────────────────────────
+  - id: en_ally
+    language: English
+    lemma: ally
+    etymology: "Middle English via Old French alier < Latin alligare, 'to bind to' (ad- + ligare, 'to bind,' also root of 'ligament')"
+    pos: noun
+    glosses: [a person or group united with another for a common purpose, especially against a common opponent]
+    domains: [alliance]
+    usage:
+      historical: "Historically strongest in political/military contexts (wartime allies, allied nations)."
+      contemporary: "Retains the political/military sense and has gained a distinct modern social-justice sense ('an ally to a marginalized group'), which foregrounds solidarity/advocacy rather than mutual defense."
+    likely_dimensions: [shared purpose, obligation, low-to-moderate intimacy]
+    register: [general, political, social-justice usage]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The newer social-justice sense is a genuinely distinct modern usage from the older political/military-alliance sense and should be tracked separately — a good example for the 'Historical Change' research question even within a single generation."
+    sources_to_consult: [Oxford English Dictionary, contemporary usage corpora]
+    evidence: []
+
+  - id: en_partner
+    language: English
+    lemma: partner
+    etymology: "Middle English, alteration of parcener < Old French parçonier < Latin partitio, 'a sharing, division' (from partire, 'to divide')"
+    pos: noun
+    glosses: [a person one shares an enterprise, activity, or romantic/domestic life with]
+    domains: [alliance, partnership, romantic/marital]
+    usage:
+      historical: "Originally a business/legal term (a 'partner' in a firm, sharing profit and liability)."
+      contemporary: "Now spans both a business sense (business partner) and a romantic/domestic sense (life partner, used partly as a gender-neutral, marriage-status-neutral alternative to spouse/boyfriend/girlfriend)."
+    likely_dimensions: [shared stake, obligation; romantic sense additionally implies intimacy, affection, duration]
+    register: [professional; general/romantic]
+    example_usage: "'business partner' vs. 'my partner' (same word, radically different domain depending on context, disambiguated only by co-text)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "One of the clearest cases in the English dataset of a single lexeme spanning two very different relationship domains (commercial partnership vs. romantic partnership) disambiguated purely by context — should be modeled as two senses under one lemma rather than forced into one domain."
+      - "The romantic sense's rise as a gender-neutral, marital-status-neutral term is itself a recent (late 20th-century) semantic shift worth dating precisely in Phase 4."
+    sources_to_consult: [Oxford English Dictionary, contemporary usage corpora]
+    evidence: []
+
+  # ── ROMANTIC / MARITAL ───────────────────────────────────────────────
+  - id: en_lover
+    language: English
+    lemma: lover
+    etymology: "Old English lufu, 'love' + agentive -er suffix"
+    pos: noun
+    glosses: [a person in a romantic and/or sexual relationship with another]
+    domains: [romantic]
+    usage:
+      historical: "Historically broader — could denote any person who loves/admires something or someone (a 'lover of music'), not exclusively a romantic partner."
+      contemporary: "Now most often specifically romantic/sexual in unmarked usage, especially outside the 'lover of X' construction, which retains the older broad sense."
+    likely_dimensions: [high affection, intimacy, variable duration]
+    register: [general, literary]
+    example_usage: "'a lover of music' (retains the older, broader 'devoted admirer' sense, distinct from the romantic-partner sense)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Genuine polysemy between 'romantic/sexual partner' and 'devoted admirer of an activity/thing' — the two senses should not be merged even though they share the same affection-based root."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_spouse
+    language: English
+    lemma: spouse
+    etymology: "Middle English via Old French spous(e) < Latin sponsus/sponsa, 'betrothed,' from spondere, 'to promise, pledge'"
+    pos: noun
+    glosses: [a husband or wife; a legally married partner]
+    domains: [marriage, kinship]
+    usage:
+      historical: "Root sense is a pledge/promise (spondere) — the relationship is lexically grounded in a formal commitment act, not primarily in affection."
+      contemporary: "Preferred as a gender-neutral, formal/legal term (tax forms, legal documents) over 'husband'/'wife.'"
+    likely_dimensions: [obligation (formal pledge), duration, kinship, formality]
+    register: [formal, legal]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Etymologically grounded in a pledge/promise rather than in affection or companionship — a useful contrast to 'lover,' which is grounded purely in the affection root."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_ex
+    language: English
+    lemma: ex
+    etymology: "clipping of the Latin prefix ex- ('former, out of'), as in ex-boyfriend/ex-girlfriend/ex-wife/ex-husband"
+    pos: noun
+    glosses: [a former romantic partner or spouse]
+    domains: [romantic, post-relationship]
+    usage:
+      historical: null
+      contemporary: "A specifically modern clipped form; notable as a relationship category defined entirely by the negation/termination of a prior relationship rather than by any positive content of its own."
+    likely_dimensions: [former intimacy/affection now absent or reduced, variable residual obligation]
+    register: [informal, general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The only entry in this dataset defined purely negatively/temporally (relative to a past state) rather than by any current positive relational content — worth flagging as a structurally distinct kind of category (a 'was' rather than an 'is')."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_situationship
+    language: English
+    lemma: situationship
+    etymology: "portmanteau of situation + relationship, 2010s–2020s coinage"
+    pos: noun
+    glosses: [an ongoing romantic/sexual involvement without a defined, agreed-upon relationship status]
+    domains: [romantic, ambiguous status]
+    usage:
+      historical: null
+      contemporary: "Names the specific modern experience of romantic/sexual involvement that deliberately avoids formal labeling — popularized through social media and dating-app culture."
+    likely_dimensions: [variable intimacy and affection, deliberately undefined duration and obligation]
+    register: [informal, very recent/slang]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "A genuinely new lexical category naming 'ambiguity of relationship status' as its own dimension — this may be an area of unusually fine, and unusually recent, lexical resolution in contemporary English, worth flagging for the 'Cultural Emphasis' research question."
+    sources_to_consult: [contemporary usage corpora, recent lexicographic tracking (e.g. dictionary 'word of the year' entries)]
+    evidence: []
+
+  # ── KINSHIP ──────────────────────────────────────────────────────────
+  - id: en_relative
+    language: English
+    lemma: relative
+    etymology: "Middle English via Old French relatif < Latin relativus, from referre, 'to carry back, refer' (re- + ferre, 'to carry')"
+    pos: noun
+    glosses: [a person connected by blood or marriage]
+    domains: [kinship]
+    usage:
+      historical: "General grammatical/logical sense ('relative to,' 'a relative term') predates and remains alongside the specifically kinship-marking sense."
+      contemporary: "Standard umbrella term for kin; unlike Arabic's ʿamm/khāl split, English does not lexically distinguish most collateral kin types (e.g. 'uncle' covers both paternal and maternal uncles) and instead relies on optional periphrasis ('uncle on my mother's side') when the distinction matters."
+    likely_dimensions: [kinship, variable obligation, variable intimacy]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "English's reliance on periphrasis ('on my mother's side') rather than a distinct lexeme for maternal vs. paternal kin is the clearest, most checkable candidate in this whole project for a genuine cross-linguistic granularity asymmetry — flagged here from the English side alone, to be tested against the Arabic data only in Phase 6."
+    sources_to_consult: [Oxford English Dictionary, kinship-terminology literature]
+    evidence: []
+
+  # ── ANTAGONISM ────────────────────────────────────────────────────────
+  - id: en_rival
+    language: English
+    lemma: rival
+    etymology: "Latin rivalis, 'one using the same stream as another' (from rivus, 'stream, brook') — originally 'one sharing a water source, hence a competitor for it'"
+    pos: noun
+    glosses: [a person competing with another for the same goal, position, or object]
+    domains: [antagonism, competition]
+    usage:
+      historical: "The 'shared stream' etymology grounds rivalry in competition over a shared, scarce resource — a structurally motivated origin, not an arbitrary label."
+      contemporary: "Can range from bitter/hostile (arch-rival) to fairly respectful (a rival who is also admired) — a wide valence range under one lexeme."
+    likely_dimensions: [competition, variable hostility, shared goal/domain]
+    register: [general]
+    example_usage: "'arch-rival' (intensifier marking a particularly sustained, often personal rivalry)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The 'shared stream' etymology is one of the more strikingly motivated derivations in this dataset — competition is lexically grounded in resource-scarcity, not personal enmity, which may explain why 'rival' tolerates a friendlier valence range than 'enemy' does."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_competitor
+    language: English
+    lemma: competitor
+    etymology: "Latin competitor, from competere, 'to strive together, to be in agreement' (com- + petere, 'to seek') — note the root sense is closer to 'co-seeker' than 'opponent'"
+    pos: noun
+    glosses: [a person or entity vying for the same objective, especially in a formal or commercial contest]
+    domains: [antagonism, competition]
+    usage:
+      historical: "Latin competere originally implied mutual striving toward a shared goal, not necessarily hostility — the adversarial sense sharpened later."
+      contemporary: "Neutral, often formal/commercial register (business competitor, athletic competitor); generally the least emotionally charged of the antagonism-domain words in this dataset."
+    likely_dimensions: [competition, low hostility, formal/structured contest]
+    register: [general, professional, formal]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "The root sense (competere, 'to strive together') being close to cooperative rather than adversarial is a good check on the etymological-fallacy warning: don't assume the modern adversarial reading was always there."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_opponent
+    language: English
+    lemma: opponent
+    etymology: "from Latin opponere, 'to set against' (ob- + ponere, 'to place')"
+    pos: noun
+    glosses: [a person on the other side of a contest, argument, or conflict]
+    domains: [antagonism]
+    usage:
+      historical: "Generic 'set against' sense from the start; not inherently personal or emotionally charged."
+      contemporary: "Standard neutral term for the other side in a structured, often rule-bound contest (a debate opponent, a chess opponent, a political opponent) — position-based rather than personal antagonism."
+    likely_dimensions: [structured opposition, low personal hostility, formal contest context]
+    register: [general, formal]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Marks positional opposition within a defined contest rather than personal enmity — a good mid-point on the hostility axis between competitor (lowest) and enemy (highest)."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_adversary
+    language: English
+    lemma: adversary
+    etymology: "Middle English via Old French adversarie < Latin adversarius, 'opponent, one turned against' (from advertere, 'to turn toward/against')"
+    pos: noun
+    glosses: [an opponent, especially one regarded with hostility or in serious conflict]
+    domains: [antagonism]
+    usage:
+      historical: "Long-standing use in legal ('adversarial system') and theological (traditionally an epithet for Satan, 'the Adversary') registers, both carrying serious weight."
+      contemporary: "More formal and more seriously hostile than 'opponent'; used for sustained, significant conflicts (legal, military, geopolitical) rather than casual contests."
+    likely_dimensions: [hostility, formal/structured conflict, seriousness]
+    register: [formal, legal, literary]
+    example_usage: "'the adversarial system' (legal register); 'the Adversary' (traditional epithet for Satan)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Occupies a formal-register slot between opponent (neutral/structured) and enemy (personal/general) — its theological usage ('the Adversary') is a distinct sense worth tracking apart from the legal and general ones."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  - id: en_enemy
+    language: English
+    lemma: enemy
+    etymology: "Middle English via Old French enemi < Latin inimicus, literally 'not a friend' (in-, negation + amicus, 'friend')"
+    pos: noun
+    glosses: [a person who is actively hostile to or seeks to harm another]
+    domains: [antagonism]
+    usage:
+      historical: "Structurally built as the direct negation of 'friend' at the Latin root (in- + amicus) — antagonism lexicalized as friendship's explicit opposite, not as an independent concept."
+      contemporary: "The strongest, most general antagonism word in English; used for personal, political, and military hostility alike."
+    likely_dimensions: [high hostility, conflict]
+    register: [general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Unlike Latin's amicus/inimicus pair (friend negated = enemy), English 'friend' and 'enemy' come from entirely unrelated Germanic and Latin roots respectively — so the negation relationship is invisible in the English forms even though it's structurally present in the Latin one still embedded inside 'enemy.' A good case for checking claims about a language's synchronic lexicon against its diachronic layers separately."
+    sources_to_consult: [Oxford English Dictionary]
+    evidence: []
+
+  # ── DIGITALLY MEDIATED WEAK TIES ─────────────────────────────────────
+  - id: en_follower
+    language: English
+    lemma: follower
+    etymology: "Old English folgian, 'to follow, accompany, obey' + agentive -er"
+    pos: noun
+    glosses: [a person who subscribes to another's social media posts/updates]
+    domains: [digitally mediated weak tie]
+    usage:
+      historical: "Older senses (a disciple/adherent, or one who follows a leader) implied at least ideological or personal allegiance."
+      contemporary: "The social-media sense requires no reciprocity, acknowledgment, or personal contact whatsoever — arguably the weakest tie named anywhere in this dataset, a one-directional relationship with an asymmetric, often anonymous other party."
+    likely_dimensions: [minimal-to-zero intimacy, one-directional, asymmetric, no obligation]
+    register: [digitally mediated]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Represents a genuinely new relationship category unavailable before social media: a named, countable, publicly displayed tie that requires no interaction at all — worth treating as a boundary case at the very edge of what counts as a 'relationship' for this ontology."
+    sources_to_consult: [Oxford English Dictionary, contemporary usage corpora]
+    evidence: []
+
+  - id: en_mutual
+    language: English
+    lemma: mutual (as a noun, clipped from 'mutual friend'/'mutual follower')
+    etymology: "from Latin mutuus, 'reciprocal, borrowed, exchanged' (adjective use predates the modern noun clipping by centuries)"
+    pos: noun
+    glosses: [a person who is connected to both parties in a conversation, especially on social media]
+    domains: [digitally mediated weak tie]
+    usage:
+      historical: "Purely adjectival for most of its history ('our mutual friend'); the noun usage ('you have three mutuals') is a recent clipping."
+      contemporary: "Names the network-topology fact of a shared connection rather than any direct relationship with the speaker at all — the 'mutual' need not be known personally by the speaker; they are defined entirely relative to a third party."
+    likely_dimensions: [zero direct intimacy, purely relational/structural (defined via a third party)]
+    register: [digitally mediated, informal]
+    example_usage: "'we have three mutuals' (a purely structural, network-topology claim, not a claim about any direct relationship)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Arguably not describing a dyadic relationship at all but a triadic network fact (A and B share a connection to C) — may need a different representational primitive than the other entries in this dataset, which are mostly dyadic."
+    sources_to_consult: [contemporary usage corpora, social-media linguistics literature]
+    evidence: []
+
+  - id: en_online_friend
+    language: English
+    lemma: online friend
+    etymology: "analytic construction: online (compound, on + line, originally telecommunications/computing jargon) + friend"
+    pos: "adjective + noun phrase"
+    glosses: [a friend known primarily or exclusively through digital communication, without regular in-person contact]
+    domains: [digitally mediated, friendship]
+    usage:
+      historical: null
+      contemporary: "Marks a friendship as mediated/digital-native, explicitly distinguishing it from in-person ('IRL,' 'real-life') friendship — the modifier signals a difference in medium of contact, not necessarily a difference in intimacy or affection."
+    likely_dimensions: [variable intimacy (can be high), companionship achieved without physical co-presence, medium-marked]
+    register: [informal, digitally mediated]
+    example_usage: "'IRL friend' (the implicit contrast term, treating in-person contact as the unmarked default)"
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Interesting test case against the 'companionship' dimension as originally defined (shared presence/activities) — an online friendship can score high on intimacy and affection while scoring near-zero on physical co-presence, which may argue for splitting 'companionship' into physical and non-physical sub-dimensions."
+    sources_to_consult: [contemporary usage corpora]
+    evidence: []
+
+  - id: en_work_friend
+    language: English
+    lemma: work friend
+    etymology: "analytic construction: work (Old English weorc) + friend"
+    pos: "adjective + noun phrase"
+    glosses: [a friend whose relationship with you is largely or entirely bounded by the workplace context]
+    domains: [friendship, professional association]
+    usage:
+      historical: null
+      contemporary: "Marks a friendship as context-bounded — often implying the relationship would not persist, or is untested outside, the workplace setting; distinguishes a genuinely warm workplace relationship from a merely functional 'colleague' one."
+    likely_dimensions: [moderate intimacy, context-bounded duration, institutional setting]
+    register: [informal, general]
+    example_usage: null
+    dimensions: {intimacy: null, affection: null, kinship: null, obligation: null, protection: null, duration: null, companionship: null, formality: null}
+    notes:
+      - "Sits between colleague (no friendship claim) and friend (no context restriction) — explicitly names context-boundedness as a dimension in its own right, distinct from intimacy or affection."
+    sources_to_consult: [contemporary usage corpora]
+    evidence: []
